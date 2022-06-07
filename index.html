@@ -11,16 +11,18 @@
     
 </head>
 <body>
-    <section class="form-reg" >
+    <form>
+        <section class="form-reg" >
         <h4>CALCULA EL COSTO DE TU CRÉDITO</h4>
         <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su nombre completo">
         <input class="controls" type="text" name="DNI" id="DNI" placeholder="Ingrese su número de documento">
         <input class="controls" type="text" name="monto" id="monto" placeholder="Ingrese el monto del credito">
-        <input class="controls" type="text" name="plazo" id="plazo" placeholder="Plazo">
+        <input class="controls" type="number" max="5" min="1" name="plazo" id="plazo" placeholder="Plazo (5 años maximo)">
         <input class="controls" type="text" name="interes" id="interes" placeholder="Interés">
         <p>¿Confirmar credito? <a href="#"></a></p>
         <input class="botons" type="submit" value="¡Confirmar!">
     </section>
+</form>
     
 </body>
 </html>
