@@ -1,4 +1,5 @@
-function miMetodo() {
-    console.log("manola")
-}
-
+// function miMetodo() {
+//     console.log("manola")
+// }
+// 
+// 
