@@ -1,28 +1,54 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <title> Simulador de creditos </title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script refer src="simCreditoVol2.js"></script>
-    <link rel="stylesheet" href="proyect.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="icon-error.svg">
+  <link rel="stylesheet" href="paginanueva.css">
+  <title>Simulador de credito</title>
 </head>
 <body>
-    <form>
-        <section class="form-reg" >
-      <center><h4>CALCULA EL COSTO DE TU CRÉDITO</h4></center>
-        <input class="controls" type="text" name="nombres" id="nombres" placeholder="Nombre">
-            <input class="controls" type="text" name="PAIS" id="PAIS" placeholder="Ingrese su país">
-        <input class="controls" type="text" name="monto" id="monto" placeholder="Ingrese el monto del crédito">
-        <input class="controls" type="number" min="1" max="5" name="plazo" id="plazo" placeholder="Plazo (5 años máximo)">
-        <input class="controls" type="text" name="interes" id="interes" placeholder="Interés">
-        <p>¿Confirmar credito?</p>
-    </form>
-        <button class="botons" type="button" id="confirmar" onclick="miMetodo()">¡Confirmar! </button>
-    </section> 
-    
+
+  <div class="main-container">
+    <section>
+      <h1>Calculá el costo de tu crédito</h1>
+      <p class="description">Con esta herramienta podrás simular financiamientos, para obtener cuánto terminarías pagando por un crédito. 
+        Ten en cuenta que cada pais tiene un IVA diferente. </p>
+    </section>
+
+    <section> 
+        <div class="form-container"> 
+        <form action="">
+          
+          <input id="nombreInput" type="text" placeholder="Nombre">
+          <div id="nombreError" class="error-container">
+         <!-- <img class="icon-error" src="./icon-error.svg" alt="">
+            <p class="error">El nombre no puede estar vacio</p>  -->
+        </div>
+
+          <input id="paisInput" type="text" placeholder="País actual">
+          <div id="paisError" class="error-container"></div>
+
+          <input id="montoInput" type="text" placeholder="Ingrese el monto del crédito">
+          <div id="montoError" class="error-container"></div>
+
+          <input id="montoInput"  min="1" max="5" type="number" placeholder="Monto (5años máximo)">
+          <div id="montoError" class="error-container"></div>
+
+          <input id="button" type="submit" onclick="fUNCIONACONFIRMAR()" value="¡CONFIRMAR!">
+
+        </form>
+        <p class="terminos">Al hacer click en el botón, usted acepta los <a href="#">Términos  y Condiciones</a></p>
+      </div>
+    </section>
+  </div>
+  
+  <footer>
+    <p class="desf">
+      Desafio de <a href="https://www.coderhouse.com" target="_blank">CoderHouse</a>. 
+      Codeado por <a href="#">Matias Fabian Arias</a>.
+    </p>
+  </footer>
+  <script src="./main.js"></script>
 </body>
 </html>
