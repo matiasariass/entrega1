@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="icon-error.svg">
-  <link rel="stylesheet" href="proyect.css">
+  <link rel="stylesheet" href="paginanueva.css">
   <title>Simulador de credito</title>
 </head>
 <body>
@@ -13,7 +13,7 @@
     <section>
       <h1>Calculá el costo de tu crédito</h1>
       <p class="description">Con esta herramienta podrás simular financiamientos, para obtener cuánto terminarías pagando por un crédito. 
-        Ten en cuenta que cada pais tiene un IVA diferente. </p>
+        Ten en cuenta que cada pais tiene un IVA diferente. Los paises disponibles son: Argentina, Chile, Uruguay, Brasil y Venezuela. </p>
     </section>
 
     <section> 
@@ -32,8 +32,8 @@
           <input id="montoInput" type="text" placeholder="Ingrese el monto del crédito">
           <div id="montoError" class="error-container"></div>
 
-          <input id="montoInput"  min="1" max="5" type="number" placeholder="Monto (5años máximo)">
-          <div id="montoError" class="error-container"></div>
+          <input id="cuotasInput" type="number" placeholder="Cuotas a pagar">
+          <div id="cuotasError" class="error-container"></div>
 
           <input id="button" type="submit" onclick="fUNCIONACONFIRMAR()" value="¡CONFIRMAR!">
 
@@ -45,10 +45,9 @@
   
   <footer>
     <p class="desf">
-      Desafio de <a href="https://www.coderhouse.com" target="_blank">CoderHouse</a>. 
-      Codeado por <a href="#">Matias Fabian Arias</a>.
+      Desafio de <a href="https://www.coderhouse.com" target="_blank"> <b>CoderHouse</b></a>. 
+      Codeado por <a href="#"><b>Matias Fabian Arias</b></a>.
     </p>
   </footer>
-  <script src="./main.js"></script>
 </body>
 </html>
