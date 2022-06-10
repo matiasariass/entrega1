@@ -13,7 +13,7 @@
     <section>
       <h1>Calculá el costo de tu crédito</h1>
       <p class="description">Con esta herramienta podrás simular financiamientos, para obtener cuánto terminarías pagando por un crédito. 
-        Ten en cuenta que cada pais tiene un IVA diferente. Los paises disponibles son: Argentina, Chile, Uruguay, Brasil y Venezuela. </p>
+        Ten en cuenta que cada pais tiene un IVA diferente. Los paises disponibles son: <b> Argentina, Chile, Uruguay, Brasil y Venezuela.</b> </p>
     </section>
 
     <section> 
@@ -29,13 +29,13 @@
           <input id="paisInput" type="text" placeholder="País actual">
           <div id="paisError" class="error-container"></div>
 
-          <input id="montoInput" type="text" placeholder="Ingrese el monto del crédito">
+          <input id="montoInput" type="text" placeholder="Monto del crédito">
           <div id="montoError" class="error-container"></div>
 
-          <input id="cuotasInput" type="number" placeholder="Cuotas a pagar">
+          <input id="cuotasInput" min="1" type="number" placeholder="Cantidad de cuotas">
           <div id="cuotasError" class="error-container"></div>
 
-          <input id="button" type="submit" onclick="fUNCIONACONFIRMAR()" value="¡CONFIRMAR!">
+          <input id="button" type="submit" onclick="fUNCIONACONFIRMAR()" value="CONFIRMAR">
 
         </form>
         <p class="terminos">Al hacer click en el botón, usted acepta los <a href="#">Términos  y Condiciones</a></p>
