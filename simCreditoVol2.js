@@ -11,7 +11,6 @@ const cuotasError = document.querySelector("#cuotasError");
 const button = document.querySelector("#boton");
 
 button.addEventListener('click',(event)=>{
-    event.preventDefault();
     validateEmpty(nameIngresado.value, nameIngresado, nombreError, "Nombre");
     validateEmpty(paisIngresado.value, paisIngresado, paisError, "País");
     validateEmpty(montoIngresado.value, montoIngresado, montoError, "Monto");
@@ -26,6 +25,7 @@ function validateEmpty(valueInput, divInput, divError, nameInput){
    }
 }
 function showError(divInput, divError, nameInput){
+   event.preventDefault();
    divInput.style.border='1px solid red';
    divError.innerHTML = `<img class="icon-error" src="./icon-error.svg" alt="">
    <p class="error">${nameInput} no puede estar vacío</p>`; 
