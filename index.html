@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="icon-error.svg">
   <link rel="stylesheet" href="proyect.css">
+  <script defer src="simCreditoVol2.js"></script>
+
   <title>Simulador de credito</title>
 </head>
 <body>
@@ -21,21 +23,18 @@
         <form action="">
           
           <input id="nombreInput" type="text" placeholder="Nombre">
-          <div id="nombreError" class="error-container">
-         <!-- <img class="icon-error" src="./icon-error.svg" alt="">
-            <p class="error">El nombre no puede estar vacio</p>  -->
-        </div>
+          <div id="nombreError" class="error-container"></div>
 
           <input id="paisInput" type="text" placeholder="País actual">
           <div id="paisError" class="error-container"></div>
 
-          <input id="montoInput" type="text" placeholder="Monto del crédito">
+          <input id="montoInput" type="number" placeholder="Monto del crédito">
           <div id="montoError" class="error-container"></div>
 
           <input id="cuotasInput" min="1" type="number" placeholder="Cantidad de cuotas">
           <div id="cuotasError" class="error-container"></div>
 
-          <input id="button" type="submit" onclick="fUNCIONACONFIRMAR()" value="CONFIRMAR">
+          <input id="boton" type="submit" value="CONFIRMAR">
 
         </form>
         <p class="terminos">Al hacer click en el botón, usted acepta los <a href="#">Términos  y Condiciones</a></p>
