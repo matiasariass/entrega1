@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="icon-error.svg">
-  <link rel="stylesheet" href="proyect.css">
-  <script defer src="simCreditoVol2.js"></script>
+  <link rel="stylesheet" href="paginanueva.css">
+  <script defer src="credito22.js"></script>
 
   <title>Simulador de credito</title>
 </head>
@@ -34,7 +34,14 @@
           <input id="cuotasInput" min="1" type="number" placeholder="Cantidad de cuotas">
           <div id="cuotasError" class="error-container"></div>
 
-          <input id="boton" type="submit" value="CONFIRMAR">
+          <input id="boton" type="submit" onclick="abrirPopup()" value="CONFIRMAR">
+
+          <div class="popUp" id="popup">
+            <img src="tick.png">
+            <h2>¡Muchas gracias!</h2>
+            <p>¡Su crédito  fue aceptado, gracias por confiar!</p>
+            <button type="button "onclick="cerrarPopup()">OK</button>
+          </div>
 
         </form>
         <p class="terminos">Al hacer click en el botón, usted acepta los <a href="#">Términos  y Condiciones</a></p>
