@@ -24,6 +24,7 @@ function validateEmpty(valueInput, divInput, divError, nameInput){
         hideError(divInput, divError);
    }
 }
+
 function showError(divInput, divError, nameInput){
    event.preventDefault();
    divInput.style.border='1px solid red';
@@ -35,12 +36,11 @@ function hideError(divInput, divError){
     divError.innerHTML = ``;
 }
 
-
 let popup = document.getElementById ("popup");
 
 function abrirPopup(){
     popup.classList.add("open-popup");
-
+    
 }
 
 function cerrarPopup(){
