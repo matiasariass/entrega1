@@ -1,4 +1,4 @@
-const nameIngresado = document.querySelector("#nombreInput").;
+const nameIngresado = document.querySelector("#nombreInput");
 const paisIngresado = document.querySelector("#paisInput");
 const montoIngresado = document.querySelector("#montoInput");
 const cuotasIngresadas = document.querySelector("#cuotasInput");
