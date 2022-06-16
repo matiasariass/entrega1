@@ -11,7 +11,7 @@ const cuotasError = document.querySelector("#cuotasError");
 const button = document.querySelector("#boton");
 
 button.addEventListener('click',(event)=>{
-    validateEmpty(nameIngresado.value, nameIngresado, nombreError, "Nombre");
+    validateEmpty(nameIngresado.value, nameIngresado, nameError, "Nombre");
     validateEmpty(paisIngresado.value, paisIngresado, paisError, "País");
     validateEmpty(montoIngresado.value, montoIngresado, montoError, "Monto");
     validateEmpty(cuotasIngresadas.value, cuotasIngresadas, cuotasError, "Cuotas");
@@ -20,8 +20,10 @@ button.addEventListener('click',(event)=>{
 function validateEmpty(valueInput, divInput, divError, nameInput){
     if(valueInput.length == 0){
         showError(divInput, divError, nameInput);
+
     }else{
         hideError(divInput, divError);
+
    }
 }
 
@@ -39,13 +41,13 @@ function hideError(divInput, divError){
 let popup = document.getElementById ("popup");
 
 function abrirPopup(){
+    if (false) 
     popup.classList.add("open-popup");
-    
+    // AGREGAR foreach
 }
 
 function cerrarPopup(){
     popup.classList.remove("open-popup");
-    
 }
 
 
