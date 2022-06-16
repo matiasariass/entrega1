@@ -1,7 +1,7 @@
-const nameIngresado = document.querySelector("#nombreInput");
-const paisIngresado = document.querySelector("#paisInput");
-const montoIngresado = document.querySelector("#montoInput");
-const cuotasIngresadas = document.querySelector("#cuotasInput");
+const nameIngresado = document.querySelector("#nombreInput").value;
+const paisIngresado = document.querySelector("#paisInput").value;
+const montoIngresado = document.querySelector("#montoInput").value;
+const cuotasIngresadas = document.querySelector("#cuotasInput").value;
 
 const nameError = document.querySelector("#nombreError");
 const paisError = document.querySelector("#paisError");
@@ -48,6 +48,7 @@ function abrirPopup(){
 
 function cerrarPopup(){
     popup.classList.remove("open-popup");
+    
 }
 
 
