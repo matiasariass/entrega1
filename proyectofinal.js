@@ -43,7 +43,6 @@ let popup = document.getElementById ("popup");
 function abrirPopup(){
     // if (false) 
     popup.classList.add("open-popup");
-    // AGREGAR foreach
 }
 
 function cerrarPopup(){
