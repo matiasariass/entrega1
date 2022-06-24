@@ -1,25 +1,24 @@
 const nameIngresado = document.querySelector("#nombreInput");
-const paisIngresado = document.querySelector("#paisInput");
+const interesIngresado = document.querySelector("#interesInput");
 const montoIngresado = document.querySelector("#montoInput");
 const cuotasIngresadas = document.querySelector("#cuotasInput");
 
 const nameError = document.querySelector("#nombreError");
-const paisError = document.querySelector("#paisError");
+const interesError = document.querySelector("#interesError");
 const montoError = document.querySelector("#montoError");
 const cuotasError = document.querySelector("#cuotasError");
 
 const button = document.querySelector("#boton");
 
-/*Evitar que la pagina se recarge al dar click en "confirmar"*/
+// NO SE REFRESCA LA PAGINA
 const getForm = document.querySelector("form");
 getForm.addEventListener("submit", (e) => {
     e.preventDefault();
 })
-
+// BOTON
 button.addEventListener('click',(event)=>{
     validateEmpty(nameIngresado.value, nameIngresado, nameError, "Nombre");
-/*No es buena practica que ejecutemos la misma funcion varias veces, aqui deberemos pensar en una logica distinta*/
-    validateEmpty(paisIngresado.value, paisIngresado, paisError, "País");
+    validateEmpty(interesIngresado.value, interesIngresado, interesError, "Interès");
     validateEmpty(montoIngresado.value, montoIngresado, montoError, "Monto");
     validateEmpty(cuotasIngresadas.value, cuotasIngresadas, cuotasError, "Cuotas");
 });
@@ -38,12 +37,12 @@ function validateEmpty(valueInput, divInput, divError, nameInput){
 const arr = [];
 function saveInStorage(){
     let findName = arr.findIndex(x => x.name == nameIngresado.value);
-    let findCountry = arr.findIndex(x => x.country == paisIngresado.value);
+    let findInt = arr.findIndex(x => x.int == interesIngresado.value);
     let findAmount = arr.findIndex(x => x.amount == montoIngresado.value);
     let findInstallments = arr.findIndex(x => x.Installments == cuotasIngresadas.value);
-    if((findName && findCountry && findAmount && findInstallments) == -1){
+    if((findName && findInt && findAmount && findInstallments) == -1){
         arr.push({name : nameIngresado.value});
-        arr.push({country: paisIngresado.value});
+        arr.push({int: interesIngresado.value});
         arr.push({amount : montoIngresado.value});
         arr.push({Installments: cuotasIngresadas.value});
 
@@ -53,6 +52,8 @@ function saveInStorage(){
     }
 }
 
+
+// POPUP
 function showError(divInput, divError, nameInput){
    event.preventDefault();
    divInput.style.border='1px solid red';
