@@ -10,8 +10,15 @@ const cuotasError = document.querySelector("#cuotasError");
 
 const button = document.querySelector("#boton");
 
+/*Evitar que la pagina se recarge al dar click en "confirmar"*/
+const getForm = document.querySelector("form");
+getForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+})
+
 button.addEventListener('click',(event)=>{
     validateEmpty(nameIngresado.value, nameIngresado, nameError, "Nombre");
+/*No es buena practica que ejecutemos la misma funcion varias veces, aqui deberemos pensar en una logica distinta*/
     validateEmpty(paisIngresado.value, paisIngresado, paisError, "País");
     validateEmpty(montoIngresado.value, montoIngresado, montoError, "Monto");
     validateEmpty(cuotasIngresadas.value, cuotasIngresadas, cuotasError, "Cuotas");
@@ -23,8 +30,27 @@ function validateEmpty(valueInput, divInput, divError, nameInput){
 
     }else{
         hideError(divInput, divError);
-
+        saveInStorage();
    }
+}
+
+/*Guado todo en un array para luego guardar este array en el storage*/
+const arr = [];
+function saveInStorage(){
+    let findName = arr.findIndex(x => x.name == nameIngresado.value);
+    let findCountry = arr.findIndex(x => x.country == paisIngresado.value);
+    let findAmount = arr.findIndex(x => x.amount == montoIngresado.value);
+    let findInstallments = arr.findIndex(x => x.Installments == cuotasIngresadas.value);
+    if((findName && findCountry && findAmount && findInstallments) == -1){
+        arr.push({name : nameIngresado.value});
+        arr.push({country: paisIngresado.value});
+        arr.push({amount : montoIngresado.value});
+        arr.push({Installments: cuotasIngresadas.value});
+
+        let objToString = JSON.stringify(arr);
+
+        localStorage.setItem("user", objToString);
+    }
 }
 
 function showError(divInput, divError, nameInput){
@@ -34,7 +60,6 @@ function showError(divInput, divError, nameInput){
    <p class="error">${nameInput} no puede estar vacío</p>`; 
 }
 function hideError(divInput, divError){
-    event.preventDefault();
     divInput.style.border='1px solid hsl(246,25%,77%)';
     divError.innerHTML = ``;
 }
@@ -49,26 +74,6 @@ function abrirPopup(){
 function cerrarPopup(){
     popup.classList.remove("open-popup");
     
-}
-
-function guardarDatos() {
-    debugger
-    const datosDeUsr = {nombre: nombreInput.value,
-                        pais: paisInput.value,
-                        monto: montoInput.value,
-                        cuotas: cuotas.value,
-                    }
-    let strg = JSON.stringify(datosDeUsr)
-    localStorage.setItem("datosDeUsr", strg)
-}
-
-function recuperarDatos (){
-    if (localStorage.length === 4){
-    nombreInput.value =localStorage.setItem("nombre")
-    paisInput.value = localStorage.setItem("pais")
-    montoInput.value = localStorage.setItem("monto")
-    cuotasInput.value = localStorage.setItem("cuotas")
-}
 }
 
 
@@ -124,6 +129,7 @@ function recuperarDatos (){
 //   nombre: "Venezuela",
 //   importe: 1.51,
 // }]
+
 
 // function calcularInteres(paisIngresado) {
 
