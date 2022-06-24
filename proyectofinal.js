@@ -34,6 +34,7 @@ function showError(divInput, divError, nameInput){
    <p class="error">${nameInput} no puede estar vacío</p>`; 
 }
 function hideError(divInput, divError){
+    event.preventDefault();
     divInput.style.border='1px solid hsl(246,25%,77%)';
     divError.innerHTML = ``;
 }
@@ -48,6 +49,26 @@ function abrirPopup(){
 function cerrarPopup(){
     popup.classList.remove("open-popup");
     
+}
+
+function guardarDatos() {
+    debugger
+    const datosDeUsr = {nombre: nombreInput.value,
+                        pais: paisInput.value,
+                        monto: montoInput.value,
+                        cuotas: cuotas.value,
+                    }
+    let strg = JSON.stringify(datosDeUsr)
+    localStorage.setItem("datosDeUsr", strg)
+}
+
+function recuperarDatos (){
+    if (localStorage.length === 4){
+    nombreInput.value =localStorage.setItem("nombre")
+    paisInput.value = localStorage.setItem("pais")
+    montoInput.value = localStorage.setItem("monto")
+    cuotasInput.value = localStorage.setItem("cuotas")
+}
 }
 
 
@@ -103,7 +124,6 @@ function cerrarPopup(){
 //   nombre: "Venezuela",
 //   importe: 1.51,
 // }]
-
 
 // function calcularInteres(paisIngresado) {
 
