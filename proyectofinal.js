@@ -34,19 +34,21 @@ function calculateResults(e) {
  const pagoTotal = (mensual * calcularPagos).toFixed(2);
 
     
-console.log (principio, calcularInteres, calcularPagos, pagoMensual, totalInteres, pagoTotal);
+console.log (pagoMensual, totalInteres, pagoTotal);
 
 e.preventDefault();
 
 }
 
-
 // NO SE REFRESCA LA PAGINA
+
 const getForm = document.querySelector("form");
 getForm.addEventListener("submit", (e) => {
     e.preventDefault();
 })
+
 // BOTON
+
 button.addEventListener('click',(event)=>{
     validateEmpty(nameIngresado.value, nameIngresado, nameError, "Nombre");
     validateEmpty(interesIngresado.value, interesIngresado, interesError, "Interès");
@@ -65,6 +67,7 @@ function validateEmpty(valueInput, divInput, divError, nameInput){
 }
 
 /*Guado todo en un array para luego guardar este array en el storage*/
+
 const arr = [];
 function saveInStorage(){
     let findName = arr.findIndex(x => x.name == nameIngresado.value);
@@ -84,7 +87,8 @@ function saveInStorage(){
 }
 
 
-// POPUP
+// ERRORES
+
 function showError(divInput, divError, nameInput){
    event.preventDefault();
    divInput.style.border='1px solid red';
@@ -95,15 +99,19 @@ function hideError(divInput, divError){
     divInput.style.border='1px solid hsl(246,25%,77%)';
     divError.innerHTML = ``;
 }
+// POPUP
 
 let popup = document.getElementById ("popup");
 
-function abrirPopup(){
-    // if (false) 
-    popup.classList.add("open-popup");
+function abrirPopup(){  
+    if(nameIngresado.value === ""){
+       
+        }else{
+            popup.classList.add("open-popup");
+        }
+    
 }
 
 function cerrarPopup(){
     popup.classList.remove("open-popup");
-    
 }
