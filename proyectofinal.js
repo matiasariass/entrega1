@@ -104,10 +104,12 @@ function hideError(divInput, divError){
 let popup = document.getElementById ("popup");
 
 function abrirPopup(){  
-    if(nameIngresado.value === ""){
+    console.log(aniosIngresados)
+    if(nameIngresado.value && interesIngresado.value && montoIngresado.value && aniosIngresados.value){
+        popup.classList.add("open-popup");
        
         }else{
-            popup.classList.add("open-popup");
+            
         }
     
 }
