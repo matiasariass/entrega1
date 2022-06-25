@@ -73,12 +73,12 @@ function saveInStorage(){
     let findName = arr.findIndex(x => x.name == nameIngresado.value);
     let findInt = arr.findIndex(x => x.int == interesIngresado.value);
     let findAmount = arr.findIndex(x => x.amount == montoIngresado.value);
-    let findInstallments = arr.findIndex(x => x.Installments == aniosIngresados.value);
-    if((findName && findInt && findAmount && findInstallments) == -1){
+    let findYears = arr.findIndex(x => x.years == aniosIngresados.value);
+    if((findName && findInt && findAmount && findYears) == -1){
         arr.push({name : nameIngresado.value});
         arr.push({int: interesIngresado.value});
         arr.push({amount : montoIngresado.value});
-        arr.push({Installments: aniosIngresados.value});
+        arr.push({years: aniosIngresados.value});
 
         let objToString = JSON.stringify(arr);
 
