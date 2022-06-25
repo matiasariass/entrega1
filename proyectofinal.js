@@ -34,7 +34,7 @@ function calculateResults(e) {
  const pagoTotal = (mensual * calcularPagos).toFixed(2);
 
     
-console.log (pagoMensual, totalInteres, pagoTotal);
+console.log (pagoMensual, pagoTotal);
 
 e.preventDefault();
 
@@ -62,7 +62,7 @@ function validateEmpty(valueInput, divInput, divError, nameInput){
 
     }else{
         hideError(divInput, divError);
-        saveInStorage();
+        saveInStorage()
    }
 }
 
@@ -86,11 +86,9 @@ function saveInStorage(){
     }
 }
 
-
 // ERRORES
 
 function showError(divInput, divError, nameInput){
-   event.preventDefault();
    divInput.style.border='1px solid red';
    divError.innerHTML = `<img class="icon-error" src="./icon-error.svg" alt="">
    <p class="error">${nameInput} no puede estar vacío</p>`; 
@@ -104,9 +102,10 @@ function hideError(divInput, divError){
 let popup = document.getElementById ("popup");
 
 function abrirPopup(){  
-    console.log(aniosIngresados)
     if(nameIngresado.value && interesIngresado.value && montoIngresado.value && aniosIngresados.value){
         popup.classList.add("open-popup");
+
+        
        
         }else{
             
@@ -117,3 +116,4 @@ function abrirPopup(){
 function cerrarPopup(){
     popup.classList.remove("open-popup");
 }
+
