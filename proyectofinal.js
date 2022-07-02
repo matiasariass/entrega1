@@ -33,8 +33,8 @@ function calculateResults(e) {
 
  //Pago total
 
- const pagoTotal = (mensual * calcularPagos).toFixed(2);
-
+ const pagoTotal = (mensual * calcularPagos).toFixed(0);
+ document.getElementById("parrafoUno").textContent = "¡Su crédito  fue aceptado, gracias por confiar! Usted pagará $" + pagoTotal
     
 console.log (pagoMensual, pagoTotal);
 
@@ -113,13 +113,6 @@ function abrirPopup(){
 function cerrarPopup(){
     popup.classList.remove("open-popup");
 }
-
-
-
-
-// Agregar variable - no funciona
-document.getElementById("parrafoUno").textContent = "¡Su crédito  fue aceptado, gracias por confiar! Usted pagará" + pagoTotal
-
 
 // libreria - no funciona
 $(document).ready(function(){
