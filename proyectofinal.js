@@ -115,6 +115,7 @@ function cerrarPopup(){
 }
 
 // LIBRERIA
+
 $(document).ready(function(){
 $('#btn1').click(function(){
 })
