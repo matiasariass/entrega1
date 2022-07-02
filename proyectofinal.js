@@ -117,7 +117,6 @@ function cerrarPopup(){
 // LIBRERIA
 $(document).ready(function(){
 $('#btn1').click(function(){
-    alert("prueba");
 })
 toastr["info"]("Por el momento solo peso argentino.")
 
