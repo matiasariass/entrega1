@@ -117,3 +117,4 @@ function cerrarPopup(){
     popup.classList.remove("open-popup");
 }
 
+ document.getElementById("parrafoUno").innerHTML = "¡Su crédito  fue aceptado, gracias por confiar! Usted pagará " + pagoTotal;
