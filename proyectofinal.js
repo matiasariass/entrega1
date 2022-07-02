@@ -117,7 +117,9 @@ function cerrarPopup(){
     popup.classList.remove("open-popup");
 }
 
+// Probe de estas formas, en la linea 122, me toma el cambio pero no concatena con la variable
 // const parrafo = document.querySelector("#parrafoUno")
+// document.getElementById("parrafoUno").textContent = "¡Su crédito  fue aceptado, gracias por confiar! Usted pagará" + pagoTotal
 // parrafo.textContent = "¡Su crédito  fue aceptado, gracias por confiar! Usted pagará " + pagoTotal
 // parrafo.innerHTML = "¡Su crédito  fue aceptado, gracias por confiar! Usted pagará " + pagoTotal
 // document.getElementById("parrafoUno").innerHTML = "¡Su crédito  fue aceptado, gracias por confiar! Usted pagará " + pagoTotal
