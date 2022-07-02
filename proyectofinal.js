@@ -34,7 +34,7 @@ function calculateResults(e) {
  //Pago total
 
  const pagoTotal = (mensual * calcularPagos).toFixed(0);
- document.getElementById("parrafoUno").textContent = "¡Su crédito  fue aceptado, gracias por confiar! Usted pagará $" + pagoTotal
+ document.getElementById("parrafoUno").textContent = "¡Su crédito  fue aceptado, gracias por confiar! Usted pagará un total de $" + pagoTotal
     
 console.log (pagoMensual, pagoTotal);
 
