@@ -114,7 +114,7 @@ function cerrarPopup(){
     popup.classList.remove("open-popup");
 }
 
-// libreria
+// LIBRERIA
 $(document).ready(function(){
 $('#btn1').click(function(){
     alert("prueba");
@@ -126,16 +126,17 @@ toastr.options = {
   "debug": false,
   "newestOnTop": true,
   "progressBar": true,
-  "positionClass": "toast-bottom-right",
+  "positionClass": toast-bottom-right,
   "preventDuplicates": true,
   "onclick": null,
-  "showDuration": "100",
-  "hideDuration": "1000",
+  "showDuration": "5000",
+  "hideDuration": "5000",
   "timeOut": "5000",
-  "extendedTimeOut": "1000",
+  "extendedTimeOut": "5000",
   "showEasing": "swing",
   "hideEasing": "linear",
   "showMethod": "fadeIn",
   "hideMethod": "fadeOut"
+  
 }
 });
