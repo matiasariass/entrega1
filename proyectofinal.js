@@ -12,6 +12,8 @@ const aniosError = document.querySelector("#aniosError");
 
 const button = document.querySelector("#boton");
 
+
+
 function calculateResults(e) {
     console.log(`calculando...`);
 
@@ -73,12 +75,12 @@ function saveInStorage(){
     let findName = arr.findIndex(x => x.name == nameIngresado.value);
     let findInt = arr.findIndex(x => x.int == interesIngresado.value);
     let findAmount = arr.findIndex(x => x.amount == montoIngresado.value);
-    let findYears = arr.findIndex(x => x.years == aniosIngresados.value);
-    if((findName && findInt && findAmount && findYears) == -1){
+    let findInstallments = arr.findIndex(x => x.Installments == aniosIngresados.value);
+    if((findName && findInt && findAmount && findInstallments) == -1){
         arr.push({name : nameIngresado.value});
         arr.push({int: interesIngresado.value});
         arr.push({amount : montoIngresado.value});
-        arr.push({years: aniosIngresados.value});
+        arr.push({Installments: aniosIngresados.value});
 
         let objToString = JSON.stringify(arr);
 
@@ -103,23 +105,44 @@ let popup = document.getElementById ("popup");
 
 function abrirPopup(){  
     if(nameIngresado.value && interesIngresado.value && montoIngresado.value && aniosIngresados.value){
-        popup.classList.add("open-popup");
-
-        
-       
-        }else{
-            
+        popup.classList.add("open-popup");  
+        }else{          
         }
-    
 }
 
 function cerrarPopup(){
     popup.classList.remove("open-popup");
 }
 
-// Probe de estas formas, en la linea 122, me toma el cambio pero no concatena con la variable
-// const parrafo = document.querySelector("#parrafoUno")
-// document.getElementById("parrafoUno").textContent = "¡Su crédito  fue aceptado, gracias por confiar! Usted pagará" + pagoTotal
-// parrafo.textContent = "¡Su crédito  fue aceptado, gracias por confiar! Usted pagará " + pagoTotal
-// parrafo.innerHTML = "¡Su crédito  fue aceptado, gracias por confiar! Usted pagará " + pagoTotal
-// document.getElementById("parrafoUno").innerHTML = "¡Su crédito  fue aceptado, gracias por confiar! Usted pagará " + pagoTotal
+
+
+
+// Agregar variable - no funciona
+document.getElementById("parrafoUno").textContent = "¡Su crédito  fue aceptado, gracias por confiar! Usted pagará" + pagoTotal
+
+
+// libreria - no funciona
+$(document).ready(function(){
+$('#btn1').click(function(){
+    alert("prueba");
+})
+toastr["info"]("Por el momento solo peso argentino.")
+
+toastr.options = {
+  "closeButton": true,
+  "debug": false,
+  "newestOnTop": true,
+  "progressBar": true,
+  "positionClass": "toast-bottom-right",
+  "preventDuplicates": true,
+  "onclick": null,
+  "showDuration": "100",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
+});
