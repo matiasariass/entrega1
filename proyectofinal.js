@@ -114,7 +114,7 @@ function cerrarPopup(){
     popup.classList.remove("open-popup");
 }
 
-// libreria - no funciona
+// libreria
 $(document).ready(function(){
 $('#btn1').click(function(){
     alert("prueba");
