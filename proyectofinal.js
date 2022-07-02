@@ -117,4 +117,7 @@ function cerrarPopup(){
     popup.classList.remove("open-popup");
 }
 
- document.getElementById("parrafoUno").innerHTML = "¡Su crédito  fue aceptado, gracias por confiar! Usted pagará " + pagoTotal;
+// const parrafo = document.querySelector("#parrafoUno")
+// parrafo.textContent = "¡Su crédito  fue aceptado, gracias por confiar! Usted pagará " + pagoTotal
+// parrafo.innerHTML = "¡Su crédito  fue aceptado, gracias por confiar! Usted pagará " + pagoTotal
+// document.getElementById("parrafoUno").innerHTML = "¡Su crédito  fue aceptado, gracias por confiar! Usted pagará " + pagoTotal
