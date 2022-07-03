@@ -16,7 +16,6 @@ const button = document.querySelector("#boton");
 
 function calculateResults(e) {
     console.log(`calculando...`);
-
     const principio = parseFloat(montoIngresado.value);
     const calcularInteres = parseFloat(interesIngresado.value) / 100 / 12;
     const calcularPagos = parseFloat(aniosIngresados.value) * 12;
