@@ -65,7 +65,7 @@ function validateEmpty(valueInput, divInput, divError, nameInput){
    }
 }
 
-/*Guado todo en un array para luego guardar este array en el storage*/
+// Guardo todo en un array para luego guardar este array en el storage / tengo que buscarle un uso.
 
 const arr = [];
 function saveInStorage(){
