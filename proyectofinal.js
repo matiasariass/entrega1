@@ -12,8 +12,6 @@ const aniosError = document.querySelector("#aniosError");
 
 const button = document.querySelector("#boton");
 
-
-
 function calculateResults(e) {
     console.log(`calculando...`);
     const principio = parseFloat(montoIngresado.value);
